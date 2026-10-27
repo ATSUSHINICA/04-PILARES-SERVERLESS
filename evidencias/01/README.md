@@ -12,4 +12,26 @@ He cambiado el valor de `message` por `Festival Control · equipo preparado` y h
 ## Cómo lo he comprobado
 He ejecutado `npm run typecheck` para comprobar los tipos y `npm start` para recompilar y arrancar Serverless Offline. Después, he probado la misma URL en Thunder y con curl. La respuesta de curl ha sido `HTTP/1.1 200 OK` y ha devuelto correctamente el JSON con el nuevo mensaje y la propiedad `service`. También he comprobado que aparece un nuevo log en la consola al realizar la petición.
 
+## Evidencias
 **Evidencia propia:** adjunto una captura de mi terminal con la petición de curl, el estado HTTP 200 y el JSON devuelto. También incluiré una captura de Thunder y del log de Serverless Offline.
+Offline [http for lambda] listening on http://localhost:3002
+Offline [http for websocket] listening on ws://localhost:3001
+Offline [http for proxy] listening on http://localhost:3000
+
+GET /dev/hello (λ: hello)
+EVENT RECIBIDO
+josea@PCALE MINGW64 ~/Documents/GITHUB/DAM2 (git)/DOCUMENTOS/DISEÑO E IMPLEMENTACION CLOUD DEVOPS/1 TRIMESTRE/UNIDAD 1/04-PILARES-SERVERLESS
+$ curl -i http://localhost:3000/dev/hello
+HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 68
+accept-ranges: bytes
+Date: Tue, 27 Oct 2026 21:27:17 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"Festival Control · equipo preparado","service":"hello"}
+
+josea@PCALE MINGW64 ~/Documents/GITHUB/DAM2 (git)/DOCUMENTOS/DISEÑO E IMPLEMENTACION CLOUD DEVOPS/1 TRIMESTRE/UNIDAD 1/04-PILARES-SERVERLESS
+$
