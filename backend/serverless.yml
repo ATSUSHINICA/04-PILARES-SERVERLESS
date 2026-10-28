@@ -1,9 +1,13 @@
-service: festival-control-api
+service: festival-control-api-alumno01
 frameworkVersion: ~4.45.0
  
 provider:
   name: aws
   runtime: nodejs22.x
+  region: us-east-1
+  stage: dev
+  iam:
+    role: arn:aws:iam::188055787420:role/LabRole
  
 plugins:
   - serverless-offline
